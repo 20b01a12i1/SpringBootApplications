@@ -1,0 +1,13 @@
+package com.example.demo.model;
+
+import java.sql.Timestamp;
+
+import lombok.Data;
+
+@Data
+public class ToDo {
+	String id;
+	Boolean completed;
+	String description;
+	String created;
+}

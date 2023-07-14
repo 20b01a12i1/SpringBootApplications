@@ -1,0 +1,7 @@
+package com.example.demo.services;
+
+public interface CommonRepository<T> {
+	public T save(T task);
+	public void delete();
+	public T findById(String id);
+}

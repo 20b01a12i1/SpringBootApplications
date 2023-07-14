@@ -1,0 +1,12 @@
+package com.example.faculty.model;
+
+import lombok.Data;
+
+@Data
+public class Faculty {
+	
+	long fid;
+	String fname;
+	String branch;
+
+}

@@ -1,0 +1,39 @@
+package com.example.demo.services;
+
+import java.util.HashSet;
+
+import com.example.demo.model.ToDo;
+
+public class ToDoRepository implements CommonRepository<ToDo> {
+
+	HashSet<ToDo> hs=new HashSet();
+	
+	@Override
+	public ToDo save(ToDo task) {
+		// TODO Auto-generated method stub
+		hs.add(task);
+//		return ToDo.task;
+		return new ToDo();
+	}
+
+	@Override
+	public void delete() {
+		// TODO Auto-generated method stub
+		hs.clear();
+		
+	}
+
+	@Override
+	public ToDo findById(String id) {
+		// TODO Auto-generated method stub
+		ToDo t=hs.stream().filter((obj)-> obj.getId().equals(id)).findAny().orElse(null);
+		return t;
+	}
+
+	@Override
+	public void update(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
